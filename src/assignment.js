@@ -36,7 +36,7 @@ function countEvenNumbers(arrayOfNumbers) {
     let count = 0;
 
     for (let num in arrayOfNumbers) {
-        if (num % 2 === 0) {
+        if (num % 2 === 0 && num != 0) {
             count++;
         }
     }
@@ -65,7 +65,7 @@ function celsiusToFahrenheit(arrayOfNumbers) {
 
         f = (c * 9 / 5) + 32;
 
-        fTemp.push(f);
+        fTemp.push(Math.floor(f));
     }
     return fTemp;
 }
